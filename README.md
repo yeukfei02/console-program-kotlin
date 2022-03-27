@@ -91,6 +91,9 @@ $ ./gradlew clean
 // format kotlin code
 $ ./gradlew formatKotlin
 
+// generate test report
+$ ./gradlew koverCollectReports
+
 // start project
 - run Main.kt
 
