@@ -1,0 +1,29 @@
+plugins {
+    id 'org.jetbrains.kotlin.jvm' version '1.6.10'
+    id 'tech.formatter-kt.formatter' version "0.7.9"
+}
+
+group 'com.donaldwu'
+version '0.1.0'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib"
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.2'
+    testImplementation(platform("org.junit:junit-bom:5.8.2"))
+    testRuntimeOnly("org.junit.platform:junit-platform-launcher") {
+        because("Only needed to run tests in a version of IntelliJ IDEA that bundles older versions")
+    }
+    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine")
+    testRuntimeOnly("org.junit.vintage:junit-vintage-engine")
+}
+
+formatKotlin
+
+test {
+    useJUnitPlatform()
+}
