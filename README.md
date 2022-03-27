@@ -73,11 +73,17 @@ open project in intellij idea
 ## Testing and run
 
 ```zsh
+// show gradle tasks
+$ ./gradlew tasks
+
 // build jar
 $ ./gradlew build
 
 // run jar
 $ java -jar build/libs/console-program-kotlin-0.1.0.jar
+
+// clean build folder
+$ ./gradlew clean
 
 // format kotlin code
 $ ./gradlew formatKotlin
@@ -86,7 +92,9 @@ $ ./gradlew formatKotlin
 - run Main.kt
 
 // run test case
-- run ConsoleProgramTest.kt
+$ ./gradlew test
+or
+run ConsoleProgramTest.kt
 ```
 
 ```zsh
