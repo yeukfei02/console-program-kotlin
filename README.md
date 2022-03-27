@@ -76,8 +76,11 @@ open project in intellij idea
 // show gradle tasks
 $ ./gradlew tasks
 
-// build jar
+// build project
 $ ./gradlew build
+
+// build jar
+$ ./gradlew jar
 
 // run jar
 $ java -jar build/libs/console-program-kotlin-0.1.0.jar
