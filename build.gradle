@@ -1,6 +1,7 @@
 plugins {
     id 'org.jetbrains.kotlin.jvm' version '1.6.10'
     id 'tech.formatter-kt.formatter' version "0.7.9"
+    id 'org.jetbrains.kotlinx.kover' version '0.5.0'
 }
 
 group 'com.donaldwu'
@@ -21,8 +22,6 @@ dependencies {
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine")
     testRuntimeOnly("org.junit.vintage:junit-vintage-engine")
 }
-
-formatKotlin
 
 test {
     useJUnitPlatform()
